@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-DIRNAME="$(dirname "$0")"
+[[ -n "$DIRNAME" ]] || exit 1
 [[ -n "$ENVFILE" ]] || ENVFILE="$DIRNAME/.env"
-set -a
 source "$ENVFILE" || exit 1
