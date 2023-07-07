@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-exec ./run.sh winetricks \
+DIRNAME="$(dirname "$0")"
+exec "$DIRNAME/run.sh" winetricks \
     atmlib \
     corefonts \
     d3dcompiler_43 \
