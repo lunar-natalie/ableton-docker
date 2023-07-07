@@ -1,6 +1,6 @@
 # Ableton Live for Docker
 
-Docker container for Ableton Live 11 using x11docker and Wine.
+Docker container for Ableton Live 11 using [x11docker][x11docker] and Wine.
 
 ## Tested environment
 
@@ -46,3 +46,5 @@ Start the setup executable via the Explorer window once the image installation h
 ## Running
 
 An application desktop entry is provided at `~/.local/share/applications/ableton-live.desktop`.
+
+[x11docker]: https://github.com/mviereck/x11docker
