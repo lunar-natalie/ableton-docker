@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=11.2.6
+Name=Ableton Live
+Comment=The music-production solution that allows you to spontaneously compose, record, remix, improvise and edit your musical ideas
+Path=$HOME/.local/opt/ableton-docker
+Exec=./start.sh
+Terminal=false
+Categories=AudioVideo;Audio;AudioEditing;X-Recorders;X-Multitrack;
+Keywords=edit;mix;record;studio;
