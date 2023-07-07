@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-[[ -n "$DIRNAME" ]] || exit 1
-[[ -n "$ENVFILE" ]] || ENVFILE="$DIRNAME/.env"
+[[ -d "$SRCDIR" ]] || exit 1
+[[ -n "$ENVFILE" ]] || ENVFILE="$SRCDIR/.env"
 source "$ENVFILE" || exit 1
+NOENV=1

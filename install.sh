@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-DIRNAME="$(dirname "$0")"
+SRCDIR="$(realpath "$(dirname "$0")")"
+[[ -n "$NOENV" ]] || { source "$SRCDIR/env.sh" || exit 1; }
 curl -fsSL "https://raw.githubusercontent.com/mviereck/x11docker/master/x11docker" \
     | sudo bash -s -- --update \
     || exit 1
 mkdir -p "$HOME/.local/share/applications" && \
-    ln -sf "$DIRNAME/ableton-live.desktop" "$HOME/.local/share/applications/ableton-live.desktop"
+    ln -sf "$SRCDIR/ableton-live.desktop" "$HOME/.local/share/applications/ableton-live.desktop"
 docker build -t ableton-docker . && \
-    "$DIRNAME/setup.sh" && \
-    exec "$DIRNAME/run.sh" wine64 explorer.exe
+    "$SRCDIR/setup.sh" && \
+    exec "$SRCDIR/run.sh" wine64 explorer.exe

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-DIRNAME="$(dirname "$0")"
-exec "$DIRNAME/run.sh" winetricks \
+SRCDIR="$(realpath "$(dirname "$0")")"
+exec "$SRCDIR/run.sh" winetricks \
     atmlib \
     corefonts \
     d3dcompiler_43 \
